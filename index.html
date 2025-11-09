@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesionados - Teotihuacán</title>
+    <link rel="stylesheet" href="lesionados.css">
+</head>
+<body class="lesionados-body">
+    <div class="registro-container">
+        <!-- Header -->
+        <header class="registro-header">
+            <img src="https://cdn.shopify.com/s/files/1/0763/5392/9451/files/03_TEOTIHUACAN_-_Fuerzas_Basicas.png?v=1749841591" alt="Teotihuacán Logo" class="registro-logo">
+            <div class="header-badge-top lesionados-badge-top">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+                <span>Control Médico</span>
+            </div>
+            <h1>Registro de Lesiones</h1>
+            <p class="registro-subtitle">Sistema de control de lesiones y molestias</p>
+        </header>
+
+        <!-- Main Card -->
+        <div class="registro-card lesionados-theme">
+            <form id="lesionadosForm" class="registro-form">
+                
+                <!-- Sección: Información del Jugador -->
+                <div class="form-section">
+                    <div class="section-title">Información del Jugador</div>
+                    
+                    <div class="form-field">
+                        <label for="nombre">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                            Nombre completo
+                        </label>
+                        <input 
+                            type="text" 
+                            id="nombre" 
+                            required 
+                            placeholder="Escribe tu nombre completo"
+                            class="form-input"
+                            autocomplete="name"
+                        >
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="celular">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                Celular
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="celular" 
+                                required 
+                                placeholder="10 dígitos" 
+                                maxlength="10" 
+                                pattern="[0-9]{10}"
+                                class="form-input"
+                                autocomplete="tel"
+                            >
+                        </div>
+
+                        <div class="form-field">
+                            <label for="categoria">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M8 6 L8 20 C8 20.5 8.5 21 9 21 H15 C15.5 21 16 20.5 16 20 V6"/> 
+                                    <path d="M8 6 L5 8 L4 11 L6 12 L8 10"/>
+                                    <path d="M16 6 L19 8 L20 11 L18 12 L16 10"/>
+                                    <path d="M8 6 L9 4 L12 6 L15 4 L16 6"/>
+                                    <line x1="8" y1="6" x2="8" y2="10"/>
+                                    <line x1="16" y1="6" x2="16" y2="10"/>
+                                </svg>
+                                Categoría
+                            </label>
+                            <select id="categoria" required class="form-select">
+                                <option value="">Selecciona categoría</option>
+                                <option value="Sub-14">Sub-14</option>
+                                <option value="Sub-16">Sub-16</option>
+                                <option value="Sub-18">Sub-18</option>
+                                <option value="Soles TDP">Soles TDP</option>
+                                <option value="Alebrijes TDP">Alebrijes TDP</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección: Información de la Lesión -->
+                <div class="form-section">
+                    <div class="section-title">Información de la Lesión</div>
+
+                    <div class="info-banner lesionados-info">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="16" x2="12" y2="12"></line>
+                            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                        </svg>
+                        <p>Describe tu lesión con el mayor detalle posible para un mejor seguimiento</p>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="tipoLesion">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                                </svg>
+                                Tipo de lesión
+                            </label>
+                            <select id="tipoLesion" required class="form-select">
+                                <option value="">Selecciona el tipo</option>
+                                <option value="Muscular">Muscular</option>
+                                <option value="Articular">Articular</option>
+                                <option value="Ligamento">Ligamento</option>
+                                <option value="Contusión">Contusión</option>
+                                <option value="Fractura">Fractura</option>
+                                <option value="Esguince">Esguince</option>
+                                <option value="Tendinitis">Tendinitis</option>
+                                <option value="Otra">Otra</option>
+                            </select>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="zonaAfectada">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M2 12h20"></path>
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                </svg>
+                                Zona afectada
+                            </label>
+                            <input 
+                                type="text" 
+                                id="zonaAfectada" 
+                                required
+                                placeholder="Ej: Rodilla derecha, tobillo..."
+                                class="form-input"
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="nivelDolor">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                                <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                                <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                            </svg>
+                            Nivel de dolor (1-10)
+                        </label>
+                        <select id="nivelDolor" required class="form-select">
+                            <option value="">Selecciona nivel</option>
+                            <option value="1">1 - Muy leve</option>
+                            <option value="2">2 - Leve</option>
+                            <option value="3">3 - Molesto</option>
+                            <option value="4">4 - Moderado</option>
+                            <option value="5">5 - Incómodo</option>
+                            <option value="6">6 - Considerable</option>
+                            <option value="7">7 - Fuerte</option>
+                            <option value="8">8 - Muy fuerte</option>
+                            <option value="9">9 - Severo</option>
+                            <option value="10">10 - Insoportable</option>
+                        </select>
+                        <small class="field-hint">Selecciona del 1 (muy leve) al 10 (insoportable)</small>
+                    </div>
+
+                    <div class="form-field">
+                        <label for="descripcion">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                            </svg>
+                            Descripción detallada
+                        </label>
+                        <textarea 
+                            id="descripcion" 
+                            required
+                            placeholder="¿Cómo ocurrió la lesión? ¿Cuándo empezó el dolor? ¿Ya recibiste atención médica?"
+                            rows="4"
+                            class="form-input"
+                        ></textarea>
+                        <small class="field-hint">Proporciona todos los detalles posibles para un mejor seguimiento</small>
+                    </div>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="button-group-minimal">
+                    <button type="submit" class="btn-minimal btn-primary btn-lesionados" id="btnRegistrar">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        <span>Registrar Lesión</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <!-- Pantalla de carga con logo -->
+        <div id="loadingScreen" class="loading-screen">
+            <div class="loading-content">
+                <img src="https://cdn.shopify.com/s/files/1/0763/5392/9451/files/03_TEOTIHUACAN_-_Fuerzas_Basicas.png?v=1749841591" alt="Teotihuacán Logo" class="loading-logo">
+                <div class="loading-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <p class="loading-text">Registrando lesión...</p>
+            </div>
+        </div>
+
+        <footer class="registro-footer">
+            <p>Teotihuacán Fuerzas Básicas © 2025</p>
+        </footer>
+    </div>
+
+    <!-- Firebase Module -->
+    <script type="module" src="lesionados.js"></script>
+</body>
+</html>
